@@ -12,18 +12,32 @@
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//create empty animal object
+var animal = {};
+//append animal specie
+animal.species = 'penguin'
+animal['name'] = 'peng';
+animal['noises'] = [];
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var noises = [];
+noises = ['honk'];
+noises.unshift('fart');
+noises.push('chirp');
+noises[noises.length] = 'slip';
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+animal['noises'] = noises;
+
+animal.noises.push('falldown');
 
 
 /* *******************************************************************
@@ -49,12 +63,54 @@
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var animals = [];
+animals.push(animal);
+console.log(animals);
+var duck = { 
+    
+species: 'duck',
+name: 'Jerome',
+noises: ['quack', 'honk', 'sneeze', 'woosh'] 
+    
+};
+animals.push(duck);
+console.log(animals);
 
+var frog = {
+    species: 'frog',
+    name: 'Omar',
+    noises: ['ribbit', 'croak', 'swim', 'tongue sound']
+};
 
+var cat = {
+    species: 'cat',
+    name: 'Nitro',
+    noises: ['meow', 'purr', 'yelp', 'beg for food']
+};
+
+animals.push(frog);
+animals.push(cat);
+console.log(animals);
+console.log(animals.length);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//used array for friends list because it is an indexed list of similar values
 
+var friends = [];
+function getRandom(arr){
+
+  var min = Math.ceil(0);
+  var max = Math.floor(arr.length);
+  return Math.floor(Math.random() * (max - min) + min); 
+
+}
+
+let randomIndex = getRandom(animals); 
+
+let animalName = animals[randomIndex].name;
+friends.push(animalName);
+frog['friends'] = friends
 
 
 /**
