@@ -162,18 +162,18 @@ if(object.friends){
 //////////////////////////////////////////////////////////////////////
 
 function isFriend(name, object) {
-    //if the object doesnt havve any friends
+    //if the object doesnt have any friends
     if (!object.friends){
         //return false
         return false;
     } 
     for(let friendsName of object.friends){
-        //if it does and the name is a given one
+        //if it does and the name is the given one
         if(name === friendsName){
             //return true
             return true;
         }
-    }
+    } //if none of this happens return false
      return false;
 }
 //////////////////////////////////////////////////////////////////////
@@ -185,7 +185,7 @@ function nonFriends(name, array) {
 let friends = [];
 //loop through people and add their friends to an array
 for(let person of array) {
-    //if the name is a name given add it to friends
+    //if the name is their name given add it to friends
     if(person.name === name){
         friends = person.friends;
 
@@ -217,8 +217,9 @@ return nonFriends;
 function updateObject(object, key, value) {
     //clone the object "the ... loops through and gets all the objects using spread syntax
 let objectClone = {...object};
-//adds the value and returns the cloned object
+//adds the provided key and value
 objectClone[key] = value;
+//returns the cloned object
 return objectClone;
 }
 

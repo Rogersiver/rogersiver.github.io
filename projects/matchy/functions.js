@@ -51,21 +51,17 @@ function remove(arr, str){
 //////////////////////////////////////////////////////////////////////
 
 function add(arr, obj){
-    let result = true
-    if(obj.name.length <= 0){
+    var result = true;
+    for(let i = 0; i < arr.length; i++){
+    if(obj.name.length <= 0 || obj.species.length <= 0 || obj.name === arr[i].name){
         result = false;
     }
-    if(obj.species.length <= 0){
-        result = false;
     }
-     for (let i = 0; i < arr.length; i++){
-        if(obj.name === arr[i].name){
-            result = false
-        }
-     }
     if(result === true){
-        arr.push(obj)
+        arr.push(obj);
     }
+
+return arr;
 }
 
 
