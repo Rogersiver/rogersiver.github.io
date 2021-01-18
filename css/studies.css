@@ -1,5 +1,5 @@
 body {
-    background: rgb(125, 198, 205);
+    background: rgb(20, 33, 61);
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: arial;
@@ -15,7 +15,7 @@ header {
 
 /* navigation menu */
 nav {
-    background: rgb(239, 80, 41);
+    background: rgb(229, 229, 229);
     margin: 0 auto;
     display: flex;
     padding: 10px;
@@ -23,7 +23,7 @@ nav {
 nav header {
     display: flex;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     flex: 1;
 }
 nav ul {
@@ -35,12 +35,12 @@ nav li {
 }
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(0,0,0);
 }
 
 /* main container area beneath menu */
 main {
-    background: rgb(245, 238, 219);
+    background: rgb(252, 163, 17);
     display: flex;
     padding:inherit;
 }
