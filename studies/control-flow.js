@@ -29,9 +29,11 @@ if(a != b){
 
  // IF ELSE
 /**
- * in addition to the if statement, we can add a next condition to be tried after the first conditional
+ * in addition to the if statement, we can add a next condition to be tried after the first conditional.
+ * 
  */
  
+ //here is an example with multiple if statements
  if(a != b){
     console.log('the above statement resolved to true'); //M-- this runs because the above statement was infact not true
 } else if (a === (b - 1)){
@@ -50,6 +52,26 @@ if(a != b){
 } else {
  console.log('everything else was false!'); //<-- this code runs because all other statements were false
 }
+
+//heres another example where the chaned together code runs 
+ if(a === a){
+    console.log('the above statement resolved to true'); //<-- this code runs because the statement was true
+} else if (a === (b - 1)){
+ console.log('this one also resolved to true'); // <-- this code runs this time because its true!
+} else {
+ console.log('everything else was false!'); //<-- this code does not run because the other statements were false
+}
+
+//here if we just had multiple if statements without the else if it would run one after the other, both code blocks would still run
+ if(a === a){
+    console.log('the above statement resolved to true'); //<-- this code runs because the statement was true
+} 
+if (a === (b - 1)){
+ console.log('this one also resolved to true'); // <-- this code runs this time because its true!
+} else {
+ console.log('everything else was false!'); //<-- this code does not run because the other statements were false
+}
+
 
 // Switch
 /**
@@ -70,3 +92,4 @@ if(a != b){
   break;
  }
  
+ //

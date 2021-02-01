@@ -51,16 +51,27 @@
   }
   //translation = while i is less than or equal to 10, console.log the number and increment i by one
   
+  //or while (condition is equal to true){run this block of code};
+  
   let arr = [1, 2, 3, 4, 5];
   let obj = {key1:"value1", key2:"value2", key3:"value3"};
   
   //For in loop
   /**
-   * we can use a for in loop to loop through the contents of an array */
- 
- for(let numbers in arr){
-     console.log(numbers); //<-- will log each of the numbers in the array
+   * we can use a for in loop to loop through the contents of an array, however it is not reccomended,
+   * for in loops are more specifically for objects, while a for of loop is for iteratables like arrays
+   * in is a keyword that specifically looks for an object to be used in the loop*/
+   
+ for(let key in obj){
+     console.log(key); //<-- will log each key in the array to the console
  }
+ 
+ //For Of Loop
+ /**
+  * we can use a for of loop to loop through the contents of iterables, like arrays. */
+  for(let number of arr){
+      console.log(number); // <-- will log each number in the array to the console.
+  }
   
   
   // to loop over an array regardless of size we use its .length property
@@ -74,7 +85,6 @@ for (let i = arr.length; i >= 0; i--){
 };
 
 //we can use the for in syntax from before to easily iterate through objects
-
 //looping through object keys
 for(let key in obj){
     console.log(key); //<-- loops through the object and logs each key

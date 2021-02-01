@@ -12,10 +12,16 @@
  * inside a function a primitive datatype is passed by copy
  *      this means the data from that primitive datatype is copied into the function at runtime
  *              a duplicate is made of this data
+ * //PASS BY COPY
+ */ var x = 10;
+    var y = x; /** <-- the value of x has now been copied on to y, there are now two identical copies of x in the data
  * 
  * complex datatypes when passed to a function access the data by reference
  *      this means that javascript is going to the original location of the data to REFERENCE it. This is instead of making
  *      a copy or duplicate to use inside of the function.
+ * //PASS BY REFERENCE
+ */ var arr = [5]
+    var arrCopy = arr;/* <-- the value of arr is now being referenced by arrCopy. There is only one copy of arr in the data.
  * 
  **** simple datatypes include */
 

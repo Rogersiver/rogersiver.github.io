@@ -181,35 +181,22 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function nonFriends(name, array) {
-//empty friends array
-let friends = [];
-//loop through people and add their friends to an array
-for(let person of array) {
-    //if the name is their name given add it to friends
-    if(person.name === name){
-        friends = person.friends;
-
-    }
-}
-//all people
-let names = []
-// put all names into the array
-for(let person of array) {
-  names.push(person.name)
-}
 
 
-let nonFriends = [];
-//go through names
-for (let theName of names){
-    //if friends doesnt have or the name is equal to the given name add it to non friends
-  if (!(friends.includes(theName) || theName === name)){
-    nonFriends.push(theName);
-  }
-} 
-return nonFriends;
-}
-
+    var notFriends = []
+    //loop through the array to get access 
+   for (var i = 0; i < array.length; i++) {
+       //check if the name is not the name from the object
+       //check if name is not inside of the friends array
+       if(array[i].name !== name && !array[i].friends.includes(name)){
+           //push people who do not have name inside of their friends array
+           //into the notFriends array
+           notFriends.push(array[i].name);
+       }
+   }
+   //return notFriends
+   return notFriends
+};
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////

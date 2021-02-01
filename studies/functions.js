@@ -15,6 +15,9 @@
  *              4a. return statements can only be used inside of the function code block
  * 
  * functions can take no parameters or as many as required
+ * 
+ * functions ARE HOISTED. all Function declarations are hoisted to the top of their scope and able to be used
+ * before declaration.
  *
  * functions also can optionally return things, a function may just complete a task and return nothing */
  
