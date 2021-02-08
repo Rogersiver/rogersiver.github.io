@@ -442,6 +442,7 @@ var letterTally = function(str, obj = {}, strArr = str.split("")) {
   if(strArr.length === 0){
     return obj;
   }
+  
   //recursive case if the strings length is greater than 0
   if(strArr.length > 0){
     //declare current letter for readibility
